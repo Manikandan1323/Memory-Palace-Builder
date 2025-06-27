@@ -1,4 +1,60 @@
-streamlit==1.35.0
-pyrebase4==4.8.0
-firebase-admin==6.4.0
-google-generativeai==0.5.2
+streamlit>=1.30.0
+firebase-admin>=6.2.0
+pyrebase4>=5.2.3
+python-dotenv>=1.0.1
+google-generativeai>=0.3.2
+deep-translator>=1.11.4
+googletrans==4.0.0-rc1
+st.markdown("""
+    <style>
+    /* Base font & spacing */
+    html, body {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Streamlit containers */
+    .block-container {
+        padding: 1rem 1rem 3rem;
+        max-width: 100% !important;
+    }
+
+    /* Mobile responsive */
+    @media only screen and (max-width: 600px) {
+        .block-container {
+            padding: 0.5rem;
+        }
+
+        h1, h2, h3 {
+            font-size: 1.2em !important;
+        }
+
+        .stButton>button {
+            font-size: 0.9em;
+            padding: 0.4em 1em;
+        }
+
+        .stTextInput>div>div>input,
+        .stSelectbox>div>div>div {
+            font-size: 1em !important;
+        }
+
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    /* Back to top link spacing */
+    a[href="#top"] {
+        display: block;
+        margin-top: 1rem;
+        text-align: right;
+        font-size: 0.9rem;
+        color: #888;
+        text-decoration: none;
+    }
+    </style>
+""", unsafe_allow_html=True)
