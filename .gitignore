@@ -1,9 +1,5 @@
 .env
+serviceAccountKey.json
+firebase_config.json
 .venv/
 __pycache__/
-firebase_config.json
-serviceAccountKey.json
-
-git add .gitignore
-
-tzTZ
