@@ -30,10 +30,13 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 init_gemini(GEMINI_API_KEY)
 
+# Initialize Firebase app if not already initialized
 if not firebase_admin._apps:
     service_account_info = dict(st.secrets["firebase_admin"])
     cred = credentials.Certificate(service_account_info)
-    return initialize_app(cred)
+    firebase_admin.initialize_app(cred)
+
+# Create Firestore client
 db = firestore.client()
 
 # --- UI Setup ---
