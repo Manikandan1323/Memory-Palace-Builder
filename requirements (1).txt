@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+firebase-admin
+pyrebase4
+deep-translator
+google-generativeai
+streamlit-lottie
