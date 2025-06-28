@@ -13,6 +13,7 @@ def load_lottie_url(url: str):
         print("Lottie load failed:", e)
         return None
 
+
 # --- Define all animations in one place ---
 LOTTIE_ANIMATIONS = {
     "brain": "https://assets10.lottiefiles.com/packages/lf20_2scSKA.json",
