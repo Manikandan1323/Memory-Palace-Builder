@@ -5,3 +5,5 @@ pyrebase4
 deep-translator
 google-generativeai
 streamlit-lottie
+requests
+setuptools
