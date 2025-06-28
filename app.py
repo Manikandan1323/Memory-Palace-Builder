@@ -226,7 +226,7 @@ elif menu == "Sign Up":
                 st.success("✅ Account created")
                 st.experimental_rerun()
             except Exception:
-                st.error("❌ Sign up failed")
+                st.error("❌ Sign up failed or Already Exist")
 
 elif menu == "Generate" and "user" in st.session_state:
     col1, col2 = st.columns([3, 1])  # Left: inputs, Right: animation
