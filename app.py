@@ -185,7 +185,7 @@ if menu == "Login":
                 st.success("✅ Logged in")
                 st.experimental_rerun()
             except Exception:
-                st.error("❌ Login failed")
+                st.error("❌ Login failed (Incorrect password or Sign up)")
 
 elif menu == "Sign Up":
     st.subheader("📝 Sign Up")
