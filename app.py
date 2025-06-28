@@ -36,7 +36,6 @@ db = firestore.client()
 
 # --- UI Setup ---
 st.set_page_config(page_title="Memory Palace Builder", layout="centered")
-
 st.markdown("""
     <style>
     /* Base font & spacing */
