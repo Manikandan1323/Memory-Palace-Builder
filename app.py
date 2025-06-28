@@ -8,14 +8,14 @@ from firebase_admin import credentials, firestore
 import firebase_admin
 from deep_translator import GoogleTranslator
 from gemini import init_gemini, generate_palace_scene
-from firebase_helper import init_firebase
+from firebase_helper import init_firebase_admin, init_pyrebase
 from streamlit_lottie import st_lottie
-from firebase_admin import credentials, initialize_app
 from lottie_helper import get_lottie_animation
+
 
 # --- Utilities ---
 def is_valid_email(email):
-    return re.match(r"[^@]+@[^@]+\.[^@]+", email)
+    return re.match(r"[^@]+@[^@]+\\.[^@]+", email)
 
 def translate_text(text, target_lang='hi'):
     try:
@@ -40,6 +40,11 @@ auth = firebase.auth()
 
 # --- UI Setup ---
 st.set_page_config(page_title="Memory Palace Builder", layout="centered")
+
+...
+# The rest of your Streamlit UI logic continues from here as in your original script
+# (Generate, My Palaces, Profile, Login, Signup, etc.)
+
 st.markdown("""
     <style>
     /* Base font & spacing */
