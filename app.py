@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from firebase_admin import credentials, firestore
 import firebase_admin
 from deep_translator import GoogleTranslator
+from firebase_helper import init_firebase_admin, init_pyrebase
 from gemini import init_gemini, generate_palace_scene
 from streamlit_lottie import st_lottie
 from lottie_helper import get_lottie_animation
