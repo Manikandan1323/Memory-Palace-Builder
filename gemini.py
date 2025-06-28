@@ -15,3 +15,4 @@ def generate_palace_scene(prompt):
         raise RuntimeError("Gemini model not initialized. Call init_gemini(api_key) first.")
     response = model.generate_content(prompt)
     return response.text.strip()
+    
