@@ -23,19 +23,20 @@ def translate_text(text, target_lang='hi'):
     except Exception as e:
         return f"\u274c Translation failed: {e}"
 
-# --- Init Firebase & Gemini ---
-firebase = init_firebase()
-auth = firebase.auth()
+# Load secrets
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 init_gemini(GEMINI_API_KEY)
 
-# Initialize Firebase app if not already initialized
+# --- Initialize Firebase Admin (Firestore) ---
 if not firebase_admin._apps:
     cred = credentials.Certificate(dict(st.secrets["firebase_admin"]))
     firebase_admin.initialize_app(cred)
-
 db = firestore.client()
+
+# --- Initialize Pyrebase (Auth, Realtime DB) ---
+firebase = init_pyrebase()
+auth = firebase.auth()
 
 # --- UI Setup ---
 st.set_page_config(page_title="Memory Palace Builder", layout="centered")
