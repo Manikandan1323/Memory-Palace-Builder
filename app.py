@@ -10,6 +10,7 @@ from deep_translator import GoogleTranslator
 from gemini import init_gemini, generate_palace_scene
 from firebase_helper import init_firebase
 from streamlit_lottie import st_lottie
+from firebase_admin import credentials, initialize_app
 from lottie_helper import get_lottie_animation
 
 # --- Utilities ---
