@@ -2,12 +2,17 @@
 import pyrebase
 import streamlit as st
 from dotenv import load_dotenv
+import firebase_admin
+from firebase_admin import credentials, firestore
+import streamlit as st
+
 
 load_dotenv()
 
 def init_firebase():
-    config = st.secrets["firebase"]
-    firebase = pyrebase.initialize_app(config)
-    return firebase
-
-
+    if not firebase_admin._apps:
+        service_account_info = dict(st.secrets["firebase_admin"])
+        cred = credentials.Certificate(service_account_info)
+        firebase_admin.initialize_app(cred)
+    
+    return firestore.client()
