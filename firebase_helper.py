@@ -14,3 +14,4 @@ def init_firebase():
 
     firebase = pyrebase.initialize_app(config)
     return firebase
+
